@@ -20,6 +20,11 @@ _global_script_classes=[ {
 "path": "res://Boid.gd"
 }, {
 "base": "SteeringBehavior",
+"class": "Constrain",
+"language": "GDScript",
+"path": "res://Constrain.gd"
+}, {
+"base": "SteeringBehavior",
 "class": "NoiseWander",
 "language": "GDScript",
 "path": "res://NoiseWander.gd"
@@ -72,6 +77,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Avoidance": "",
 "Boid": "",
+"Constrain": "",
 "NoiseWander": "",
 "OffsetPursue": "",
 "PlayerSteering": "",
@@ -87,6 +93,7 @@ _global_script_class_icons={
 [application]
 
 config/name="C19382426-GE2-Assignment"
+run/main_scene="res://Forest-Fire.tscn"
 config/icon="res://icon.png"
 
 [autoload]

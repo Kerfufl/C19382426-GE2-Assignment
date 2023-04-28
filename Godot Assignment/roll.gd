@@ -9,19 +9,24 @@ export var speed = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var space_state = get_world().direct_space_state
-	var test = space_state.intersect_ray(rg.global_transform.origin,Vector3(0,-1,0))
-	print(test)
-	pass # Replace with function body.
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
-	var bruh =rg.linear_velocity
+	var lr = Input.get_axis("force_left", "force_right")
+	var fb = Input.get_axis("force_forward", "force_back")
 	var space_state = get_world().direct_space_state
-	var down = space_state.intersect_ray(rg.global_transform.origin,Vector3(0,-1,0))
-	rg.add_central_force(Vector3(0,0,100) * - speed*delta)
+	var res = space_state.intersect_ray(transform.origin,transform.origin + Vector3(0,-1,0)*5,[self])
+	
+	#add_central_force(Vector3(0,0,100) * -speed*delta)
+	
+	if abs(lr) > 0:
+		add_central_force(Vector3(0,0,100*-lr * speed*delta))
+	if abs(fb) > 0:
+		add_central_force(Vector3(100 * fb*speed*delta,0,0))
 	#print(down)
-	DebugDraw.draw_line(rg.transform.origin, Vector3(0,0,100)*-speed, Color.chartreuse)
-	DebugDraw.draw_line(rg.transform.origin, Vector3(rg.transform.origin.x,rg.transform.origin.y-1,rg.transform.origin.z), Color.beige)
+	#DebugDraw.draw_line(rg.transform.origin, Vector3(1,0,0), Color.chartreuse)
+	DebugDraw.draw_line(transform.origin, transform.origin + Vector3(0,-1,0), Color.beige)
+	DebugDraw.draw_line(res.position, res.position+res.normal*2, Color.aqua)
 	#pass
+

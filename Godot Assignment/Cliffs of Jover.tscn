@@ -29,6 +29,7 @@ data = PoolVector3Array( 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.3889, 0.5, 0.5, 0
 transform = Transform( 9, 0, 0, 0, -6.99382e-07, 0.01, 0, -16, -4.37114e-10, 0, 0, -2 )
 mesh = SubResource( 1 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Node2"]
-transform = Transform( 9, 0, 0, 0, -6.99382e-07, 0.01, 0, -16, -4.37114e-10, 0, 0, -2 )
+[node name="StaticBody" type="StaticBody" parent="Node2/Mesh2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Node2/Mesh2/StaticBody"]
 shape = SubResource( 2 )

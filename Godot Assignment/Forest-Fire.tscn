@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://root.gd" type="Script" id=1]
 [ext_resource path="res://NoiseWander.gd" type="Script" id=2]
 [ext_resource path="res://Boid.gd" type="Script" id=3]
 [ext_resource path="res://Cam.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cliffs of Jover.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Constrain.gd" type="Script" id=6]
+[ext_resource path="res://Avoidance.gd" type="Script" id=7]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -32,3 +34,10 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="KinematicBody"]
 mesh = SubResource( 2 )
+
+[node name="Avoidance" type="Node" parent="KinematicBody"]
+script = ExtResource( 7 )
+weight = 2.0
+
+[node name="Cliffs of Jover" parent="." instance=ExtResource( 5 )]
+transform = Transform( 3, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 0 )

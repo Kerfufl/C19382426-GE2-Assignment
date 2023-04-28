@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Cliffs of Jover.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CameraController.gd" type="Script" id=2]
@@ -10,11 +10,6 @@
 [sub_resource type="SpatialMaterial" id=2]
 
 [sub_resource type="SphereShape" id=4]
-
-[sub_resource type="PlaneMesh" id=5]
-
-[sub_resource type="ConcavePolygonShape" id=6]
-data = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1 )
 
 [node name="Spatial" type="Spatial"]
 
@@ -35,15 +30,6 @@ material/0 = SubResource( 2 )
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 shape = SubResource( 4 )
-
-[node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 2, 0, 0, 0, 1.88629, -0.66475, 0, 0.66475, 1.88629, 0, 0, 18.0042 )
-
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
-mesh = SubResource( 5 )
-
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-shape = SubResource( 6 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.51517, 2.2639, 2.22459 )

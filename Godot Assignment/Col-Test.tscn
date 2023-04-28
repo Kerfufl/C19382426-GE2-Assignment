@@ -19,13 +19,15 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.94041, 1.44988, -2.19428 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95099, 2.46684, -0.270883 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.55463, 2.03327, -0.473384 )
 mode = 2
 continuous_cd = true
+sleeping = true
 script = ExtResource( 3 )
+speed = 0
 
 [node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00656652, -0.023401, 0.00114036 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 mesh = SubResource( 3 )
 material/0 = SubResource( 2 )
 

@@ -24,9 +24,23 @@ func _process(delta):
 		add_central_force(Vector3(0,0,100*-lr * speed*delta))
 	if abs(fb) > 0:
 		add_central_force(Vector3(100 * fb*speed*delta,0,0))
+	
+	if Input.is_action_just_pressed("jump_force"):
+		add_central_force(Vector3(0,100,0))
+	
+	
+		
+		
 	#print(down)
 	#DebugDraw.draw_line(rg.transform.origin, Vector3(1,0,0), Color.chartreuse)
 	DebugDraw.draw_line(transform.origin, transform.origin + Vector3(0,-1,0), Color.beige)
-	DebugDraw.draw_line(res.position, res.position+res.normal*2, Color.aqua)
+	if !res.empty():
+		DebugDraw.draw_line(res.position, res.position+res.normal*2, Color.aqua)
+		if Input.is_action_just_pressed("normal_force"):
+			add_central_force(res.normal*100)
 	#pass
 
+func _input(event):
+#	if event is InputEventKey and event.scancode == KEY_CONTROL and event.pressed :
+#		add_central_force(Vector3(0,100*5,0))
+	pass

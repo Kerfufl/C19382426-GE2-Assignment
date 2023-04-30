@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://root.gd" type="Script" id=1]
 [ext_resource path="res://NoiseWander.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Extra Long Hill.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Constrain.gd" type="Script" id=6]
 [ext_resource path="res://Avoidance.gd" type="Script" id=7]
+[ext_resource path="res://fairy-time.tscn" type="PackedScene" id=8]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -21,6 +22,8 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.48011
 [node name="KinematicBody" type="KinematicBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.34286, 0 )
 script = ExtResource( 3 )
+
+[node name="StateMachine" type="Node" parent="KinematicBody"]
 
 [node name="NoiseWander" type="Node" parent="KinematicBody"]
 script = ExtResource( 2 )
@@ -42,3 +45,6 @@ weight = 2.0
 
 [node name="Extra Long Hill" parent="." instance=ExtResource( 5 )]
 transform = Transform( 2, 0, 0, 0, -8.74228e-08, 2, 0, -2, -8.74228e-08, 1, 0, 0 )
+
+[node name="fumo_cirno(1)" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.93877, 2.34055, 8.09456 )

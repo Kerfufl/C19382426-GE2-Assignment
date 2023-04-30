@@ -60,6 +60,11 @@ _global_script_classes=[ {
 "path": "res://Separation.gd"
 }, {
 "base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://State.gd"
+}, {
+"base": "Node",
 "class": "StateMachine",
 "language": "GDScript",
 "path": "res://StateMachine.gd"
@@ -85,6 +90,7 @@ _global_script_class_icons={
 "School": "",
 "Seek": "",
 "Separation": "",
+"State": "",
 "StateMachine": "",
 "SteeringBehavior": "",
 "Wander": ""

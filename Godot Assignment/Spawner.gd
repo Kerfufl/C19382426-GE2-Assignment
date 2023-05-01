@@ -25,11 +25,14 @@ func _process(delta):
 
 
 func spawn():
+	#TODO: rotate feathers towards bird on instantiation
 	var fe = feath.instance()
+	#fe.global_rotation = get_parent().global_rotation
+	#fe.global_rotation = 
 	fe.global_transform.origin = global_transform.origin
 	fe.scale = Vector3(1*featherScale,1*featherScale,1*featherScale)
-	#TODO: rotate feathers towards bird on instantiation
-	#fe.global_transform.basis = get_parent().global_transform.origin
+	
+	
 	get_node("../..").call_deferred("add_child",fe)
 	bitCount.push_back(fe)
 	print(bitCount)

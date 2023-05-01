@@ -39,6 +39,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Flee.gd"
 }, {
+"base": "State",
+"class": "HuntState",
+"language": "GDScript",
+"path": "res://HuntState.gd"
+}, {
 "base": "SteeringBehavior",
 "class": "NoiseWander",
 "language": "GDScript",
@@ -74,6 +79,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Separation.gd"
 }, {
+"base": "State",
+"class": "ShootState",
+"language": "GDScript",
+"path": "res://ShootState.gd"
+}, {
 "base": "Node",
 "class": "State",
 "language": "GDScript",
@@ -106,6 +116,7 @@ _global_script_class_icons={
 "Cohesion": "",
 "Constrain": "",
 "Flee": "",
+"HuntState": "",
 "NoiseWander": "",
 "OffsetPursue": "",
 "PlayerSteering": "",
@@ -113,6 +124,7 @@ _global_script_class_icons={
 "School": "",
 "Seek": "",
 "Separation": "",
+"ShootState": "",
 "State": "",
 "StateMachine": "",
 "SteeringBehavior": "",

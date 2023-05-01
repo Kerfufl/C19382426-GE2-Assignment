@@ -1,10 +1,11 @@
-extends State
+class_name HuntState extends State
 var boid
 
 var shootTime = false
-
+var spawn: Node
 func _ready():
 	boid = get_parent()
+	spawn =get_node("../Spawner")
 	pass # Replace with function body.
 	
 func get_class():
@@ -22,13 +23,18 @@ func _exit():
 	pass
 	
 func _think():
-	pass
+	if shootTime:
+		boid.get_node("StateMachine").change_state(ShootState.new())
+		pass
  
 
 
 func _on_Area_body_entered(body):
 	#if body
-	print(body)
+	#print(body)
 	#print("Time to die")
-	shootTime = true
+	if len(spawn.bitCount) == spawn.featherLimit:
+		shootTime = true
+#	else:
+#		print("Not enough ammo")
 	pass # Replace with function body.

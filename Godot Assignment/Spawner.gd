@@ -25,10 +25,7 @@ func _process(_delta):
 
 
 func spawn():
-	#TODO: rotate feathers towards bird on instantiation
 	var fe = feath.instance()
-	#fe.global_rotation = get_parent().global_rotation
-	#fe.global_rotation = 
 	fe.global_transform.origin = global_transform.origin
 	fe.scale = Vector3(1*featherScale,1*featherScale,1*featherScale)
 	

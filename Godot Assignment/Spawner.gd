@@ -7,6 +7,8 @@ export var feath:PackedScene
 export var bitCount = []
 export var featherLimit = 3
 
+export var featherScale = 4
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
@@ -25,6 +27,7 @@ func _process(delta):
 func spawn():
 	var fe = feath.instance()
 	fe.global_transform.origin = global_transform.origin
+	fe.scale = Vector3(1*featherScale,1*featherScale,1*featherScale) 
 	get_node("../..").call_deferred("add_child",fe)
 	bitCount.push_back(fe)
 	print(bitCount)

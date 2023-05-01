@@ -25,6 +25,7 @@ leader_node_path = NodePath("../../Birb")
 [node name="Avoidance" type="Node" parent="."]
 script = ExtResource( 2 )
 weight = 4.0
+draw_gizmos = false
 
 [node name="feather" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.008, 0, 0, 0, -3.49691e-10, 0.008, 0, -0.008, -3.49691e-10, 0, 0, 0.300207 )

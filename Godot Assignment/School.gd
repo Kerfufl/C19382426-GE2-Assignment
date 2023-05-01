@@ -59,7 +59,7 @@ func _process(delta):
 	if partition:
 		partition()
 
-# Called when the node enters the scene tree for the first time.
+# Called when the node enters the scene tree for the first timetime.
 func _ready():
 	randomize()
 	center = get_node(center_path)

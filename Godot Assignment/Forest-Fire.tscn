@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://root.gd" type="Script" id=1]
 [ext_resource path="res://NoiseWander.gd" type="Script" id=2]
@@ -14,21 +14,12 @@
 [ext_resource path="res://OffsetPursue.gd" type="Script" id=12]
 [ext_resource path="res://bop.tscn" type="PackedScene" id=13]
 [ext_resource path="res://bop.gd" type="Script" id=14]
-[ext_resource path="res://material/mat.tres" type="Material" id=15]
 [ext_resource path="res://Bit.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Spawner.gd" type="Script" id=17]
 
 [sub_resource type="BoxShape" id=1]
 
 [sub_resource type="CubeMesh" id=2]
-
-[sub_resource type="CapsuleShape" id=3]
-radius = 0.2
-height = 0.2
-
-[sub_resource type="CapsuleMesh" id=4]
-radius = 0.2
-mid_height = 0.2
 
 [node name="Root" type="Spatial"]
 script = ExtResource( 1 )
@@ -76,6 +67,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.06302 )
 script = ExtResource( 17 )
 feath = ExtResource( 16 )
 
+[node name="Timer" type="Timer" parent="Birb"]
+wait_time = 5.0
+autostart = true
+
 [node name="Extra Long Hill" parent="." instance=ExtResource( 5 )]
 transform = Transform( 5, 0, 0, 0, -2.18557e-07, 5, 0, -5, -2.18557e-07, -15.6412, 0, 0 )
 visible = false
@@ -120,46 +115,4 @@ script = ExtResource( 8 )
 boid_camera_path = NodePath("../../camera follow")
 boid_path = NodePath("../../Birb")
 
-[node name="Bit" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.81424, 20.6745, 5.65158 )
-script = ExtResource( 3 )
-max_speed = 15.0
-max_force = 15
-draw_gizmos = false
-
-[node name="CollisionShape" type="CollisionShape" parent="Bit"]
-shape = SubResource( 3 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Bit"]
-mesh = SubResource( 4 )
-material/0 = ExtResource( 15 )
-
-[node name="OffsetPursue" type="Node" parent="Bit"]
-script = ExtResource( 12 )
-leader_node_path = NodePath("../../Birb")
-
-[node name="Avoidance" type="Node" parent="Bit"]
-script = ExtResource( 7 )
-weight = 4.0
-
-[node name="Bit2" type="KinematicBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.76875, 20.6745, 5.65158 )
-script = ExtResource( 3 )
-max_speed = 15.0
-max_force = 15
-draw_gizmos = false
-
-[node name="CollisionShape" type="CollisionShape" parent="Bit2"]
-shape = SubResource( 3 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Bit2"]
-mesh = SubResource( 4 )
-material/0 = ExtResource( 15 )
-
-[node name="OffsetPursue" type="Node" parent="Bit2"]
-script = ExtResource( 12 )
-leader_node_path = NodePath("../../Birb")
-
-[node name="Avoidance" type="Node" parent="Bit2"]
-script = ExtResource( 7 )
-weight = 4.0
+[connection signal="timeout" from="Birb/Timer" to="Birb/Spawner" method="_on_Timer_timeout"]

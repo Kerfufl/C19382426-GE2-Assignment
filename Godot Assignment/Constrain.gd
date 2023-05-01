@@ -20,7 +20,7 @@ func calculate():
 	var power = max(to_center.length() - radius, 0)
 	return to_center.limit_length(power)
 	 
-func _process(delta):
+func _process(_delta):
 	if draw_gizmos:
 		draw_gizmos()
 	

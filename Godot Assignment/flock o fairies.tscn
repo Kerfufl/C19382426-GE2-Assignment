@@ -16,6 +16,8 @@
 [node name="Spatial" type="Spatial"]
 
 [node name="Boid" type="KinematicBody" parent="."]
+collision_layer = 12
+collision_mask = 12
 script = ExtResource( 2 )
 max_speed = 4.0
 draw_gizmos = false

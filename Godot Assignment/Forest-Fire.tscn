@@ -31,7 +31,7 @@ radius = 3.0
 script = ExtResource( 1 )
 
 [node name="Birb" type="KinematicBody" parent="."]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -5.94273, 24.0552, 11.3818 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -12.4213, 24.0552, -7.02532 )
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 3 )
@@ -44,7 +44,6 @@ script = ExtResource( 14 )
 [node name="StateMachine" type="Node" parent="Birb"]
 script = ExtResource( 19 )
 initial_state = NodePath("../HuntState")
-global_state_path = NodePath("../ShootState")
 
 [node name="NoiseWander" type="Node" parent="Birb"]
 script = ExtResource( 2 )
@@ -80,6 +79,8 @@ wait_time = 5.0
 autostart = true
 
 [node name="Area" type="Area" parent="Birb"]
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape" type="CollisionShape" parent="Birb/Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.74681, 0 )
@@ -135,3 +136,4 @@ boid_camera_path = NodePath("../../camera follow")
 boid_path = NodePath("../../Birb")
 
 [connection signal="timeout" from="Birb/Timer" to="Birb/Spawner" method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Birb/Area" to="Birb/HuntState" method="_on_Area_body_entered"]

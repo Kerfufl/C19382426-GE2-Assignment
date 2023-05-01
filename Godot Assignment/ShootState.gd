@@ -6,14 +6,14 @@ func _ready():
 	pass # Replace with function body.
 	
 func get_class():
-	return "Hunt State"
+	return "Shoot State"
 
 func _enter():
-	print("Entering attack state")
+	print("Entering shoot state")
 	boid.set_enabled_all(false)
-	boid.get_node("NoiseWander").enabled = true
-	boid.get_node("Avoidance").enabled = true
-	boid.get_node("Constrain").enabled = true
+#	boid.get_node("NoiseWander").enabled = true
+#	boid.get_node("Avoidance").enabled = true
+#	boid.get_node("Constrain").enabled = true
 	pass
 
 func _exit():

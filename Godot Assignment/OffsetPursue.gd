@@ -24,7 +24,7 @@ func _ready():
 		leader_boid = get_node(leader_node_path)
 		calculate_offset()
 		
-func _process(delta):
+func _process(_delta):
 	if draw_gizmos:
 		DebugDraw.draw_line(projected, world_target, Color.aliceblue)			
 

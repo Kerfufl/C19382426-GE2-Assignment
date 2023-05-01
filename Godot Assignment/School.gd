@@ -1,6 +1,8 @@
-class_name School extends Node
+class_name School extends Spatial
 
 export var fish_scene:PackedScene
+
+export var draw_gizmos = false
 
 export var count = 5
 
@@ -52,12 +54,12 @@ func partition():
 		cells[key].push_back(boid)
 
 func _process(delta):
-	#if draw_gizmos:
-	draw_gizmos()
+	if draw_gizmos:
+		draw_gizmos()
 	if partition:
 		partition()
 
-# Called when the node enters the scene tree for the first time.
+# Called when the node enters the scene tree for the first timetime.
 func _ready():
 	randomize()
 	center = get_node(center_path)
@@ -65,7 +67,7 @@ func _ready():
 	var p = cell_to_position(cell)
 	for i in count:
 		var fish = fish_scene.instance()		
-		var pos = Utils.random_point_in_unit_sphere() * radius
+		var pos = center.global_transform.origin + (Utils.random_point_in_unit_sphere() * radius)
 		add_child(fish)
 		fish.global_transform.origin = pos
 		fish.global_transform.basis = Basis(Vector3.UP, rand_range(0, PI * 2.0))
@@ -75,7 +77,7 @@ func _ready():
 		else:
 			boid = fish.find_node("Boid", true)
 		if boids.size() == 0:
-			boid.draw_gizmos = true
+			#boid.draw_gizmos = true
 			pass
 		boids.push_back(boid)		
 		

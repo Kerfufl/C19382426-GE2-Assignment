@@ -2,6 +2,8 @@ class_name School extends Node
 
 export var fish_scene:PackedScene
 
+export var draw_gizmos = false
+
 export var count = 5
 
 export var radius = 100
@@ -52,8 +54,8 @@ func partition():
 		cells[key].push_back(boid)
 
 func _process(delta):
-	#if draw_gizmos:
-	draw_gizmos()
+	if draw_gizmos:
+		draw_gizmos()
 	if partition:
 		partition()
 
@@ -75,7 +77,7 @@ func _ready():
 		else:
 			boid = fish.find_node("Boid", true)
 		if boids.size() == 0:
-			boid.draw_gizmos = true
+			#boid.draw_gizmos = true
 			pass
 		boids.push_back(boid)		
 		

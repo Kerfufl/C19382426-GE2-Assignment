@@ -19,6 +19,7 @@ func _process(delta):
 
 func spawn():
 	var fe = feath.instance()
+	fe.global_transform.origin = global_transform.origin
 	get_node("../..").call_deferred("add_child",fe)
 	bitCount.push_back(fe)
 	print(bitCount)

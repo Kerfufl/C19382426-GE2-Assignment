@@ -84,5 +84,8 @@ func _ready():
 			# constrain.center_path = center_path
 			constrain.center = center
 			constrain.radius = radius
+#		var cohesion = boid.get_node("Cohesion")
+#		if cohesion:
+#			cohesion.center_of_mass = get_node("../fumo_cirno(1)").global_transform.origin
 		
 

@@ -35,10 +35,12 @@ draw_gizmos = false
 
 [node name="Alignment" type="Node" parent="Boid"]
 script = ExtResource( 3 )
+weight = 3.0
 draw_gizmos = false
 
 [node name="Cohesion" type="Node" parent="Boid"]
 script = ExtResource( 8 )
+weight = 3.0
 draw_gizmos = false
 
 [node name="Wander" type="Node" parent="Boid"]
@@ -48,3 +50,4 @@ draw_gizmos = false
 [node name="Constrain" type="Node" parent="Boid"]
 script = ExtResource( 4 )
 draw_gizmos = false
+radius = 20.0

@@ -91,7 +91,7 @@ _global_script_classes=[ {
 }, {
 "base": "Node",
 "class": "Utils",
-"language": "",
+"language": "GDScript",
 "path": "res://Utils.gd"
 }, {
 "base": "SteeringBehavior",

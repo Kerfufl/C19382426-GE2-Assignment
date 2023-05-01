@@ -895,7 +895,7 @@ transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0
 transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0 )
 
 [node name="CirnoDefRig" type="Spatial" parent="Sketchfab_model/cfbede00cc924beb9328a12315d6ed03fbx/Object_2/RootNode"]
-transform = Transform( 100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0 )
+transform = Transform( 100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0 )
 
 [node name="Object_12" type="Spatial" parent="Sketchfab_model/cfbede00cc924beb9328a12315d6ed03fbx/Object_2/RootNode/CirnoDefRig"]
 

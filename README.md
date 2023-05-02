@@ -15,7 +15,13 @@ A 'nature sim' in the sense that it simulates a school o fboids, which can be di
 
 ## Screenshots
 
+### A bird of prey and its formidable squadron **wing**
+![uhoh](/pics/feather_flock.png)
+### A fairy about to get taken out by a relatively large and sharp feather
 ![uhoh](/pics/cirno-danger.png)
+
+### A bird of prey on its approach
+![uhoh](/pics/impending.png)
 
 # Instructions
 

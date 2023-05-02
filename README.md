@@ -15,7 +15,7 @@ A 'nature sim' in the sense that it simulates a school o fboids, which can be di
 
 ## Screenshots
 
-![uhoh](./pics/cirno_danger.png)
+![uhoh](/pics/cirno_danger.png)
 
 # Instructions
 

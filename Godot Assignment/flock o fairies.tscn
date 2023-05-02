@@ -65,4 +65,3 @@ enabled = false
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="Boid"]
 stream = ExtResource( 11 )
-volume_db = -9.613

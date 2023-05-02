@@ -27,11 +27,12 @@ func _enter():
 #	boid.get_node("Constrain").enabled = true
 	for i in spawn.bitCount:
 		i.set_enabled_all(false)
-		i.pause = !i.pause
+		#i.pause = !i.pause
 		
 		var pur = i.get_node("Pursue")
 		i.max_speed = 20
 		i.max_force = 15
+		i.get_node("CollisionShape").disabled = true
 		var rng = RandomNumberGenerator.new()
 		var tar = rng.randi_range(0,len(school.boids))
 		

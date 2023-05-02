@@ -22,6 +22,7 @@ func _on_Area_body_entered(body):
 		body.get_node("DeathSound").play()
 		print("Die")
 		school.boids.erase(body)
+		body.set_enabled_all(false)
 		body.queue_free()
 		get_parent().queue_free() 
 	pass # Replace with function body.

@@ -29,6 +29,7 @@ shape = SubResource( 1 )
 
 [node name="fumo_cirno(1)" parent="Boid" instance=ExtResource( 1 )]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+visible = false
 script = ExtResource( 10 )
 
 [node name="Avoidance" type="Node" parent="Boid"]

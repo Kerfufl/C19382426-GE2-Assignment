@@ -36,6 +36,7 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource( 3 )
 draw_gizmos = false
+pause = true
 
 [node name="stylized_falcon" parent="Birb" instance=ExtResource( 13 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.393606, 0 )
@@ -75,7 +76,7 @@ feath = ExtResource( 16 )
 featherScale = 6
 
 [node name="Timer" type="Timer" parent="Birb"]
-wait_time = 5.0
+wait_time = 2.0
 autostart = true
 
 [node name="Area" type="Area" parent="Birb"]

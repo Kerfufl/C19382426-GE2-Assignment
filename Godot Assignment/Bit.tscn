@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://feather.glb" type="PackedScene" id=1]
 [ext_resource path="res://Avoidance.gd" type="Script" id=2]
 [ext_resource path="res://Boid.gd" type="Script" id=3]
 [ext_resource path="res://OffsetPursue.gd" type="Script" id=4]
+[ext_resource path="res://Pursue.gd" type="Script" id=5]
 
 [sub_resource type="CapsuleShape" id=3]
 radius = 0.2
@@ -31,3 +32,8 @@ draw_gizmos = false
 
 [node name="feather" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.008, 0, 0, 0, -3.49691e-10, 0.008, 0, -0.008, -3.49691e-10, 0, 0, 0.300207 )
+
+[node name="Pursue" type="Node" parent="."]
+script = ExtResource( 5 )
+draw_gizmos = false
+enabled = false

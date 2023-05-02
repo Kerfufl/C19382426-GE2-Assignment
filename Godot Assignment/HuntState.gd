@@ -3,9 +3,11 @@ var boid
 
 var shootTime = false
 var spawn: Node
+var s: Node
 func _ready():
 	boid = get_parent()
 	spawn =get_node("../Spawner")
+	s = ShootState.new()
 	pass # Replace with function body.
 	
 func get_class():
@@ -24,7 +26,7 @@ func _exit():
 	
 func _think():
 	if shootTime:
-		boid.get_node("StateMachine").change_state(ShootState.new())
+		boid.get_node("StateMachine").change_state(s)
 		pass
  
 
@@ -34,6 +36,7 @@ func _on_Area_body_entered(body):
 	#print(body)
 	#print("Time to die")
 	if len(spawn.bitCount) == spawn.featherLimit:
+		s.target = body
 		shootTime = true
 #	else:
 #		print("Not enough ammo")

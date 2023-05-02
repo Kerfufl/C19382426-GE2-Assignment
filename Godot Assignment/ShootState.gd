@@ -3,12 +3,13 @@ var boid
 var spawn: Node
 var target:Node
 
-var school: Node
+
 var audio:Node
 func _ready():
 	boid = get_parent()
 	spawn =get_node("../Spawner")
 	audio = get_node("../Audio")
+	
 	pass # Replace with function body.
 	
 func get_class():

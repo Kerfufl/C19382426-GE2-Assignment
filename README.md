@@ -15,6 +15,8 @@ A 'nature sim' in the sense that it simulates a school o fboids, which can be di
 
 ## Screenshots
 
+![uhoh](./pics/cirno_danger.png)
+
 # Instructions
 
 Load the godot project in version 3.5.1. Open the Forest-Fire Scene and press play.
@@ -29,13 +31,18 @@ Standard camera controller from GE2 boids repo, camera following one of the patr
 | CameraController.gd | Godot_Boids |
 | FPController.gd | Godot_Boids |
 | StateMachine.gd | Modified from Godot_Boids | 
+| Wander.gd | Godot_Boids |
 | NoiseWander.gd | Godot_Boids |
 | Constrain.gd| Godot_Boids |
 | Avoidance.gd| Godot_Boids |
 | Pursue.gd | Godot_Boids |
 | OffsetPursue.gd | Godot_Boids |
 | School.gd | Godot_Boids |
+| Cohesion.gd | Godot_Boids |
+| Separation.gd | Godot_Boids |
+| Alignment.gd | Godot_Boids |
 | Spawner.gd| Self Written |
+| Collision.gd | Self Written |
 | HuntState.gd| Self Written / based on state.gd |
 | ShootState.gd| Self Written / based on state.gd |
 

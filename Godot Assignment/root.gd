@@ -14,8 +14,9 @@ func _ready():
 	var screen_size = OS.get_screen_size()
 	var window_size = OS.get_window_size()
 	
-	OS.set_window_position(screen_size*0.5 - window_size*0.5) 	
+	#OS.set_window_position(screen_size*0.5 - window_size*0.5) 	
 	OS.set_current_screen(0)
+	OS.window_maximized = true
 	DebugDraw.text_custom_font = custom_font
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -42,3 +43,8 @@ func _create_graph(title, is_fps, show_title, pos, flags, size = Vector2(256, 60
 			graph.custom_font = font			
 			graph.frame_time_mode = false
 	return graph
+
+func _input(event):
+	if event is InputEventKey and event.pressed and ! event.echo:
+		if event.scancode == KEY_Q:
+			get_tree().quit()

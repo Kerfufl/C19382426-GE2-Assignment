@@ -1,6 +1,8 @@
 class_name HuntState extends State
-var boid
 
+export var mute = false
+
+var boid
 var shootTime = false
 var spawn: Node
 var s: Node
@@ -21,8 +23,9 @@ func _enter():
 	boid.get_node("NoiseWander").enabled = true
 	boid.get_node("Avoidance").enabled = true
 	boid.get_node("Constrain").enabled = true
-	audio.stream= load("res://The Gensokyo The Gods Loved.mp3")
-	audio.play()
+	if not mute:
+		audio.stream= load("res://The Gensokyo The Gods Loved.mp3")
+		audio.play()
 	pass
 
 func _exit():
@@ -42,6 +45,7 @@ func _on_Area_body_entered(body):
 	if len(spawn.bitCount) == spawn.featherLimit:
 		#print(body.get_parent().boids)
 		s.target = body
+		s.mute = mute
 		shootTime = true
 #	else:
 #		print("Not enough ammo")

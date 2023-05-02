@@ -1,4 +1,6 @@
 class_name ShootState extends State
+
+export var mute = false
 var boid
 var spawn: Node
 var target:Node
@@ -18,8 +20,9 @@ func get_class():
 
 func _enter():
 	print("Entering shoot state")
-	audio.stream= load("res://Solar Sect of Mystic Wisdom ~ Nuclear Fusion.mp3")
-	audio.play()
+	if not mute:
+		audio.stream= load("res://Solar Sect of Mystic Wisdom ~ Nuclear Fusion.mp3")
+		audio.play()
 	boid.set_enabled_all(false)
 	boid.pause = true
 #	boid.get_node("NoiseWander").enabled = true

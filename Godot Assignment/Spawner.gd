@@ -32,7 +32,7 @@ func spawn():
 	
 	get_node("../..").call_deferred("add_child",fe)
 	bitCount.push_back(fe)
-	print(bitCount)
+	#print(bitCount)
 
 
 func _on_Timer_timeout():

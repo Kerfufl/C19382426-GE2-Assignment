@@ -29,7 +29,6 @@ shape = SubResource( 1 )
 
 [node name="fumo_cirno(1)" parent="Boid" instance=ExtResource( 1 )]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
-visible = false
 script = ExtResource( 10 )
 
 [node name="Avoidance" type="Node" parent="Boid"]
@@ -64,5 +63,6 @@ radius = 20.0
 script = ExtResource( 9 )
 enabled = false
 
-[node name="DeathSound" type="AudioStreamPlayer" parent="Boid"]
+[node name="DeathSound" type="AudioStreamPlayer3D" parent="Boid"]
 stream = ExtResource( 11 )
+max_distance = 253.73

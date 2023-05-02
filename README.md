@@ -25,6 +25,7 @@ Standard camera controller from GE2 boids repo, camera following one of the patr
 # Assets:
 
 | **Asset** | **Source** |
+|-----------|-----------|
 | CameraController.gd | Godot_Boids |
 | FPController.gd | Godot_Boids |
 | StateMachine.gd | Modified from Godot_Boids | 

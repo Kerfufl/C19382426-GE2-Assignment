@@ -24,6 +24,7 @@ shape = SubResource( 3 )
 
 [node name="OffsetPursue" type="Node" parent="."]
 script = ExtResource( 4 )
+draw_gizmos = false
 leader_node_path = NodePath("../../Birb")
 
 [node name="Avoidance" type="Node" parent="."]

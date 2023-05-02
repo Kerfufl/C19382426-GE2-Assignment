@@ -20,9 +20,8 @@ func _ready():
 func _on_Area_body_entered(body):
 	if body != null and body.get_node("DeathSound") != null:
 		#print(body.get_node("DeathSound"))
+		#Sound won't play due to timing, timing too messy for current implementation
 		body.get_node("DeathSound").play()
-		
-		#print("Die")
 		school.boids.erase(body)
 		body.set_enabled_all(false)
 		body.queue_free()

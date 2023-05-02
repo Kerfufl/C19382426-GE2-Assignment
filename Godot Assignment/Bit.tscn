@@ -37,3 +37,9 @@ transform = Transform( 0.008, 0, 0, 0, -3.49691e-10, 0.008, 0, -0.008, -3.49691e
 script = ExtResource( 5 )
 draw_gizmos = false
 enabled = false
+
+[node name="Area" type="Area" parent="."]
+collision_layer = 12
+collision_mask = 12
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]

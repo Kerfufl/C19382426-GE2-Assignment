@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Solar Sect of Mystic Wisdom ~ Nuclear Fusion.mp3-9ecfdad6de92bb4821b4b16f5a91fde4.mp3str"
+
+[deps]
+
+source_file="res://Solar Sect of Mystic Wisdom ~ Nuclear Fusion.mp3"
+dest_files=[ "res://.import/Solar Sect of Mystic Wisdom ~ Nuclear Fusion.mp3-9ecfdad6de92bb4821b4b16f5a91fde4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

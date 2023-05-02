@@ -3,9 +3,12 @@ var boid
 var spawn: Node
 var target:Node
 
+var school: Node
+var audio:Node
 func _ready():
 	boid = get_parent()
 	spawn =get_node("../Spawner")
+	audio = get_node("../Audio")
 	pass # Replace with function body.
 	
 func get_class():
@@ -13,6 +16,8 @@ func get_class():
 
 func _enter():
 	print("Entering shoot state")
+	audio.stream= load("res://Solar Sect of Mystic Wisdom ~ Nuclear Fusion.mp3")
+	audio.play()
 	boid.set_enabled_all(false)
 	boid.pause = true
 #	boid.get_node("NoiseWander").enabled = true
@@ -23,7 +28,8 @@ func _enter():
 		i.pause = !i.pause
 		
 		var pur = i.get_node("Pursue")
-		
+		i.max_speed = 20
+		i.max_force = 15
 		pur.enemy_boid = target
 		pur.enabled = true
 		#k.enemy_boid = 

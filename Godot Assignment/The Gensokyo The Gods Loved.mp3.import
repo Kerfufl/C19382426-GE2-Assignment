@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The Gensokyo The Gods Loved.mp3-2b84c6caf84979fc91e1a26bf84bcea1.mp3str"
+
+[deps]
+
+source_file="res://The Gensokyo The Gods Loved.mp3"
+dest_files=[ "res://.import/The Gensokyo The Gods Loved.mp3-2b84c6caf84979fc91e1a26bf84bcea1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

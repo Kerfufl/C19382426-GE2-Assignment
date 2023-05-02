@@ -4,10 +4,12 @@ var boid
 var shootTime = false
 var spawn: Node
 var s: Node
+var audio:Node
 func _ready():
 	boid = get_parent()
 	spawn =get_node("../Spawner")
 	s = ShootState.new()
+	audio = get_node("../Audio")
 	pass # Replace with function body.
 	
 func get_class():
@@ -19,6 +21,8 @@ func _enter():
 	boid.get_node("NoiseWander").enabled = true
 	boid.get_node("Avoidance").enabled = true
 	boid.get_node("Constrain").enabled = true
+	audio.stream= load("res://The Gensokyo The Gods Loved.mp3")
+	audio.play()
 	pass
 
 func _exit():
@@ -36,6 +40,7 @@ func _on_Area_body_entered(body):
 	#print(body)
 	#print("Time to die")
 	if len(spawn.bitCount) == spawn.featherLimit:
+		#print(body.get_parent().boids)
 		s.target = body
 		shootTime = true
 #	else:

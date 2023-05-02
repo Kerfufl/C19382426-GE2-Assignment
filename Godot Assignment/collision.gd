@@ -23,5 +23,5 @@ func _on_Area_body_entered(body):
 		print("Die")
 		school.boids.erase(body)
 		body.queue_free()
-		#queue_free() 
+		get_parent().queue_free() 
 	pass # Replace with function body.

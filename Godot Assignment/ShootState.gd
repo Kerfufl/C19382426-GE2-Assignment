@@ -3,12 +3,13 @@ var boid
 var spawn: Node
 var target:Node
 
-
+var school:Node
 var audio:Node
 func _ready():
 	boid = get_parent()
 	spawn =get_node("../Spawner")
 	audio = get_node("../Audio")
+	school = get_node("../../School")
 	
 	pass # Replace with function body.
 	
@@ -31,7 +32,10 @@ func _enter():
 		var pur = i.get_node("Pursue")
 		i.max_speed = 20
 		i.max_force = 15
-		pur.enemy_boid = target
+		var rng = RandomNumberGenerator.new()
+		var tar = rng.randi_range(0,len(school.boids))
+		
+		pur.enemy_boid = school.boids[tar]
 		pur.enabled = true
 		#k.enemy_boid = 
 		#boid.

@@ -1,9 +1,23 @@
 # C19382426-GE2-Assignment
 Repository for Game Engines 2 assignment
 
-# Overview:
-A flock of fairies, managed by a schooling behaviour, is minding its own business when birds of prey using noise-wander behaviours descend upon them. They must use their size and maneuverabiltiy to evade the projectiles fired by these birds
+Name: **Eoin McMahon**
+Student Number: **C19382426**
+Class: DT211C / TU857
 
+# Description
+
+**A flock of fairies, managed by a schooling behaviour, is minding its own business when birds of prey using noise-wander behaviours descend upon them. They must use their size and maneuverabiltiy to evade the projectiles fired by these birds.**
+
+A 'nature sim' in the sense that it simulates a school o fboids, which can be dispersed when attacked by a not strange bird of prey launching its own feathers. This stemmed from acombination of different inspirations, all amalgamating into this strange little implementation.
+
+## Video
+
+## Screenshots
+
+# Instructions
+
+# How?
 # Sources:
 Sources for models and music/sound effects used in this assignment:
 

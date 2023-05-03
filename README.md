@@ -12,7 +12,7 @@ Class: DT211C / TU857
 A 'nature sim' in the sense that it simulates a school o fboids, which can be dispersed when attacked by a not strange bird of prey launching its own feathers. This stemmed from acombination of different inspirations, all amalgamating into this strange little implementation.
 
 ## Video
-
+![uhoh](https://youtu.be/r3UQohyxmzg)
 ## Screenshots
 
 ### A bird of prey and its formidable squadron **wing**

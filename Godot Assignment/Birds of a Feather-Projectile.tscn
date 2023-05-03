@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://FPController.gd" type="Script" id=1]
 [ext_resource path="res://School.gd" type="Script" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://OffsetPursue.gd" type="Script" id=5]
 [ext_resource path="res://Constrain.gd" type="Script" id=6]
 [ext_resource path="res://root.gd" type="Script" id=7]
-[ext_resource path="res://school_config.gd" type="Script" id=8]
 [ext_resource path="res://StateMachine.gd" type="Script" id=9]
 [ext_resource path="res://Spawner.gd" type="Script" id=10]
 [ext_resource path="res://CameraController.gd" type="Script" id=11]
@@ -95,7 +94,7 @@ volume_db = -30.588
 transform = Transform( 10, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, -15.6412, 0, 0 )
 
 [node name="School" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.45387, 16.3886, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.45387, 15.2945, 0 )
 script = ExtResource( 2 )
 fish_scene = ExtResource( 15 )
 draw_gizmos = true
@@ -103,9 +102,6 @@ count = 30
 radius = 2
 neighbor_distance = 4
 center_path = NodePath("../school_center")
-
-[node name="School Config" type="Node" parent="."]
-script = ExtResource( 8 )
 
 [node name="camera follow" type="KinematicBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.99473, -2.54799 )
@@ -123,7 +119,7 @@ script = ExtResource( 12 )
 draw_gizmos = false
 
 [node name="school_center" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.92624, 8.40672, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.92624, 11.0621, 0 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.6267, 23.4053, -10.2687 )

@@ -135,7 +135,7 @@ _global_script_class_icons={
 [application]
 
 config/name="C19382426-GE2-Assignment"
-run/main_scene="res://Forest-Fire.tscn"
+run/main_scene="res://Birds of a Feather-Projectile.tscn"
 config/icon="res://icon.png"
 
 [autoload]

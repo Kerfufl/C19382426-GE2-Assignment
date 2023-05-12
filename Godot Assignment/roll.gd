@@ -2,6 +2,7 @@ extends RigidBody
 
 onready var rg = get_node(".")
 export var speed = 5
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -36,9 +37,11 @@ func _process(delta):
 	DebugDraw.draw_line(transform.origin, transform.origin + Vector3(0,-1,0), Color.beige)
 	if !res.empty():
 		DebugDraw.draw_line(res.position, res.position+res.normal*2, Color.aqua)
+		DebugDraw.draw_line(res.position+Vector3.UP, res.position+Vector3.UP+ (res.normal).cross(global_transform.basis.x)*2, Color.magenta)
 		if Input.is_action_just_pressed("normal_force"):
 			add_central_force(res.normal*100)
 	#pass
+	
 
 func _input(event):
 #	if event is InputEventKey and event.scancode == KEY_CONTROL and event.pressed :
